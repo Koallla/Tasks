@@ -2,13 +2,16 @@
 
 function findUniq(arr) {
   let UniqCount = arr[0];
+
   for (const element of arr) {
+    if (UniqCount !== arr[1]) {
+      return UniqCount;
+    }
     if (UniqCount !== element) {
       UniqCount = element;
       return UniqCount;
     }
   }
-  console.log(UniqCount);
 }
 
 console.log(findUniq([2, 1, 1, 1, 1, 1]));
