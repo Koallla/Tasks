@@ -33,13 +33,14 @@
 // console.log(even_or_odd(7));
 // console.log(even_or_odd(1));
 
-function filter_list() {
-  const result = filter_list.filter(function(number) {
-    return number > 0;
-  });
-  alert(result);
-}
+// ====================================================================================
+// Выбрать из массива только числа
+// function filter_list(array) {
+//   // const result = array.filter(item => typeof item === "number");
+//   const result = array.filter(item => Number.isInteger(item));
+//   console.log(result);
+// }
 
-filter_list([1, 2, "a", "b"]);
-filter_list([1, "a", "b", 0, 15]);
-filter_list([1, 2, "aasf", "1", "123", 123]);
+// filter_list([1, 2, "a", "b"]);
+// filter_list([1, "a", "b", 0, 15]);
+// filter_list([1, 2, "aasf", "1", "123", 123]);
