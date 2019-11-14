@@ -5,27 +5,18 @@
 //   let UniqCount = arr[0];
 
 //   for (const element of arr) {
-//     if (UniqCount !== arr[1] && UniqCount !== arr[2]) {
+//     if (UniqCount !== arr[1]) {
 //       return UniqCount;
 //     }
-
 //     if (UniqCount !== element) {
 //       UniqCount = element;
 //       return UniqCount;
 //     }
-// //   }
-// // }
-// function findUniq(arr) {
-//   return +arr.filter(value => {
-//     return arr.indexOf(value) == arr.lastIndexOf(value);
-//   });
+//   }
 // }
 
 // console.log(findUniq([2, 1, 1, 1, 1, 1]));
 // console.log(findUniq([0, 0, 0.55, 0, 0]));
-// console.log(findUniq([0, 1, 0]));
-// console.log(findUniq([1, 1, 1, 2, 1, 1]));
-// console.log(findUniq([3, 10, 3, 3, 3]));
 // ==========================================================
 // Четное или не четное
 // function even_or_odd(number) {
@@ -42,34 +33,42 @@
 // console.log(even_or_odd(7));
 // console.log(even_or_odd(1));
 
-// function filter_list() {
-//   const result = filter_list.filter(function(number) {
-//     return number > 0;
-//   });
-//   alert(result);
+// ====================================================================================
+// Выбрать из массива только числа
+// function filter_list(array) {
+//   // const result = array.filter(item => typeof item === "number");
+//   const result = array.filter(item => Number.isInteger(item));
+//   console.log(result);
 // }
 
 // filter_list([1, 2, "a", "b"]);
 // filter_list([1, "a", "b", 0, 15]);
 // filter_list([1, 2, "aasf", "1", "123", 123]);
 
-// ===========================================================================================
-// Добавить знак & перед последним именем
+const double = arrays => {
+  const newArray = [];
+  for (let array of arrays) {
+    newArray.push(array * 2);
+  }
+  console.log(newArray);
+};
 
-// function list(names) {
-//   const AllNames = names.reduce((acc, name) => acc + name.name);
+double([1, 2, 3]);
 
-//   console.log(AllNames);
-// }
+const add = arrays => {
+  let total = 0;
+  for (let array of arrays) {
+    total += array;
+  }
+  console.log(total);
+};
 
-// list([{ name: "Bart" }, { name: "Lisa" }, { name: "Maggie" }]);
-// // returns 'Bart, Lisa & Maggie'
+add([1, 2, 3]);
 
-// list([{ name: "Bart" }, { name: "Lisa" }]);
-// // // returns 'Bart & Lisa'
+const array1 = ["a", "b", "c"];
 
-// list([{ name: "Bart" }]);
-// // // returns 'Bart'
+array1.forEach = element => {
+  return element;
+};
 
-// list([]);
-// // returns ''
+console.log(array1.forEach(array1));
