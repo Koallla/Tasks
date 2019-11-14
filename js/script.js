@@ -45,30 +45,36 @@
 // filter_list([1, "a", "b", 0, 15]);
 // filter_list([1, 2, "aasf", "1", "123", 123]);
 
-const double = arrays => {
-  const newArray = [];
-  for (let array of arrays) {
-    newArray.push(array * 2);
-  }
-  console.log(newArray);
-};
+// =======================================================
+// const double = arrays => {
+//   const newArray = [];
+//   for (let array of arrays) {
+//     newArray.push(array * 2);
+//   }
+//   console.log(newArray);
+// };
 
-double([1, 2, 3]);
+// double([1, 2, 3]);
 
-const add = arrays => {
-  let total = 0;
-  for (let array of arrays) {
-    total += array;
-  }
-  console.log(total);
-};
+// const add = arrays => {
+//   let total = 0;
+//   for (let array of arrays) {
+//     total += array;
+//   }
+//   console.log(total);
+// };
 
-add([1, 2, 3]);
+// add([1, 2, 3]);
 
-const array1 = ["a", "b", "c"];
+// const array1 = ["a", "b", "c"];
 
-array1.forEach = element => {
-  return element;
-};
+// array1.forEach = element => {
+//   return element;
+// };
 
-console.log(array1.forEach(array1));
+// console.log(array1.forEach(array1));
+
+// =======================================================
+
+fetch("http://bookstore.com/api/customers");
+Accept: application / json;
