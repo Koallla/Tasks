@@ -76,5 +76,18 @@
 
 // =======================================================
 
-fetch("http://bookstore.com/api/customers");
-Accept: application / json;
+// const listItem = '<li class="list-item"></li>';
+const list = document.querySelector(".list");
+
+fetch("https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11")
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    const markup = data
+
+      .map(value => `<li class="list-item">Buy ${value.ccy} ${value.buy}</li>`)
+      .join(" ");
+
+    list.insertAdjacentHTML("afterbegin", markup);
+  });
