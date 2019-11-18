@@ -23,9 +23,6 @@ fetch(
       <li class="list-item">Name: ${name}</li>
       <li class="list-item">Localtime: ${localtime}</li>`;
 
-    const image = document.createElement("img");
-    image.setAttribute("src", weather_icons);
-
     const list = document.querySelector(".list");
 
     list.innerHTML = markup;
