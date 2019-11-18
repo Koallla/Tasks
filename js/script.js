@@ -130,8 +130,6 @@
 // buypassCORS = https://cors-anywhere.herokuapp.com/
 // api.openweathermap.org/data/2.5/weather?q=London
 
-//   AIzaSyBD04XP72ay8ijDkORFep0J-yUMtQOjVdo - мой ключ Google
-
 // =======================================================
 // OPENWEATHER
 // const key = "48d7ba55d76cf45b84f2e89c5d99ee83";
