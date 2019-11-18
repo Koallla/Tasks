@@ -1,7 +1,7 @@
 "use script";
 
 fetch(
-  "http://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= fetch:ip"
+  "https://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= fetch:ip"
 )
   .then(res => res.json())
   .then(data => {
