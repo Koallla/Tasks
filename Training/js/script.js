@@ -146,7 +146,7 @@
 // const baseUrl = "http://api.weatherstack.com/";
 
 fetch(
-  "http://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= fetch:ip"
+  "https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= fetch:ip"
 )
   .then(res => res.json())
   .then(data => {
