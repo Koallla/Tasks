@@ -1,7 +1,7 @@
 "use script";
 
 fetch(
-  "https://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= fetch:ip"
+  "https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= fetch:ip"
 )
   .then(res => res.json())
   .then(data => {
@@ -9,10 +9,9 @@ fetch(
     const country = data.location.country;
     const localtime = data.location.localtime;
     const region = data.location.region;
-    const name = data.location.name;
     const windSpeed = data.current.wind_speed;
     const cloudcover = data.current.cloudcover;
-    const weather_icons = data.current.weather_icons[0];
+    const timezone_id = data.location.timezone_id;
 
     const markup = `
       <li class="list-item">Temperature: ${temperature} C</li>
@@ -20,7 +19,7 @@ fetch(
       <li class="list-item">Cloudcover: ${cloudcover}</li>
       <li class="list-item">Country: ${country}</li>
       <li class="list-item">Region: ${region}</li>
-      <li class="list-item">Name: ${name}</li>
+      <li class="list-item">Timezone: ${timezone_id}</li>
       <li class="list-item">Localtime: ${localtime}</li>`;
 
     const list = document.querySelector(".list");
