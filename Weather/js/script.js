@@ -4,7 +4,7 @@ const oneGetCurrentPosition = location => {
   let latitude = location.coords.latitude;
   let longitude = location.coords.longitude;
   fetch(
-    `http://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= ${latitude}, + ${longitude}`
+    `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=e8278975abb258561367cab2590794a3&query= ${latitude}, + ${longitude}`
   )
     .then(res => res.json())
     .then(data => {
