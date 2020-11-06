@@ -13,19 +13,12 @@ export default class App extends Component {
     API().then(res => this.setState({ location: res.location }));
   }
 
-  // getData = async () => {
-  //   await API().then(res => this.setState({ data: res }));
-  // };
-
-
-
   render() {
-    const { current, location  } = this.state;
+    const { current, location } = this.state;
 
     return (
       <div className="App">
-        <h2>Hello bro</h2>
-        <WeatherList current={current} location={location}  />
+        <WeatherList current={current} location={location} />
       </div>
     );
   }
