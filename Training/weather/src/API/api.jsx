@@ -7,7 +7,10 @@ const params = {
 
 const API = () => {
   return axios
-    .get('http://api.weatherstack.com/current', { params })
+    .get(
+      'https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current',
+      { params },
+    )
     .then(response => response.data);
 };
 
