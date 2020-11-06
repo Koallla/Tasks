@@ -4,25 +4,28 @@ import WeatherList from './weatherList/weatherList';
 
 export default class App extends Component {
   state = {
-    data: '',
+    current: {},
+    location: {},
   };
 
   componentDidMount() {
-    API().then(res => this.setState({ data: res }));
+    API().then(res => this.setState({ current: res.current }));
+    API().then(res => this.setState({ location: res.location }));
   }
 
   // getData = async () => {
   //   await API().then(res => this.setState({ data: res }));
   // };
 
+
+
   render() {
-    const { data } = this.state;
-    console.log(data.current);
+    const { current, location  } = this.state;
 
     return (
       <div className="App">
         <h2>Hello bro</h2>
-        <WeatherList data={data} />
+        <WeatherList current={current} location={location}  />
       </div>
     );
   }
