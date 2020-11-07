@@ -1,8 +1,18 @@
 import React from 'react';
 
-const weatherList = ({ current, location }) => {
+const weatherList = ({ current, location, onChange, onClick, value }) => {
   return (
     <ul>
+      <input
+        className="input-city"
+        placeholder="Enter city"
+        type="text"
+        value={value}
+        onChange={onChange}
+      />
+      <button className="btn" type="submit" onClick={onClick}>
+        Show weather
+      </button>
       <img alt="weather" src={current.weather_icons}></img>
       <li className="list-item">Temperature: {current.temperature} C</li>
       <li className="list-item">Wind speed: {current.windSpeed}m/s</li>
