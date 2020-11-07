@@ -1,8 +1,12 @@
 import React from 'react';
+import styles from './weatherList.module.css';
 
 const weatherList = ({ current, location, onChange, onClick, value }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
+      <div className={styles.img}>
+        <img alt="weather" src={current.weather_icons}></img>
+      </div>
       <input
         className="input-city"
         placeholder="Enter city"
@@ -10,17 +14,37 @@ const weatherList = ({ current, location, onChange, onClick, value }) => {
         value={value}
         onChange={onChange}
       />
-      <button className="btn" type="submit" onClick={onClick}>
+      <button className={styles.btn} type="submit" onClick={onClick}>
         Show weather
       </button>
-      <img alt="weather" src={current.weather_icons}></img>
-      <li className="list-item">Temperature: {current.temperature} C</li>
-      <li className="list-item">Wind speed: {current.windSpeed}m/s</li>
-      <li className="list-item">Cloudcover: {current.cloudcover}%</li>
-      <li className="list-item">Country: {location.country}</li>
-      <li className="list-item">Region: {location.region}</li>
-      <li className="list-item">Name: {location.name}</li>
-      <li className="list-item">Localtime: {location.localtime}</li>
+      <li className={styles.list_item}>
+        Temperature:{' '}
+        <span className={styles.list_item_data}> {current.temperature} </span> C
+      </li>
+      <li className={styles.list_item}>
+        Wind speed:{' '}
+        <span className={styles.list_item_data}> {current.wind_speed} </span>{' '}
+        m/s
+      </li>
+      <li className={styles.list_item}>
+        Cloudcover:{' '}
+        <span className={styles.list_item_data}> {current.cloudcover} </span> %
+      </li>
+      <li className={styles.list_item}>
+        Country:{' '}
+        <span className={styles.list_item_data}> {location.country} </span>{' '}
+      </li>
+      <li className={styles.list_item}>
+        Region:{' '}
+        <span className={styles.list_item_data}> {location.region} </span>{' '}
+      </li>
+      <li className={styles.list_item}>
+        City: <span className={styles.list_item_data}> {location.name} </span>{' '}
+      </li>
+      <li className={styles.list_item}>
+        Localtime:{' '}
+        <span className={styles.list_item_data}> {location.localtime} </span>{' '}
+      </li>
     </ul>
   );
 };
