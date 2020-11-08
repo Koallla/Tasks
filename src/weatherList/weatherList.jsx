@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './weatherList.module.css';
+import styles from './weatherlist.module.css';
 
 const weatherList = ({ current, location, onChange, onClick, value }) => {
   return (
