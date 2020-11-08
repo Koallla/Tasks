@@ -6,17 +6,24 @@ const weatherList = ({ current, location, onChange, onClick, value }) => {
     <ul className={styles.list}>
       <div className={styles.img}>
         <img alt="weather" src={current.weather_icons}></img>
+        <img alt="weather" src={current.weather_icons}></img>
+        <img alt="weather" src={current.weather_icons}></img>
       </div>
-      <input
-        className="input-city"
-        placeholder="Enter city"
-        type="text"
-        value={value}
-        onChange={onChange}
-      />
-      <button className={styles.btn} type="submit" onClick={onClick}>
-        Show weather
-      </button>
+      <div className={styles.form}>
+        <form action="">
+          <input
+            className={styles.input_city}
+            placeholder="Enter city"
+            type="text"
+            value={value}
+            onChange={onChange}
+          />
+        </form>
+        <button className={styles.btn} type="submit" onClick={onClick}>
+          Show weather
+        </button>
+      </div>
+
       <li className={styles.list_item}>
         Temperature:{' '}
         <span className={styles.list_item_data}> {current.temperature} </span> C

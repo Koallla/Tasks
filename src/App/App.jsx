@@ -11,19 +11,19 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    // const { city } = this.state;
-    // if (city) {
-    //   API(city).then(res => this.setState({ current: res.current }));API(city).then(res => this.setState({ current: res.current }));
-    //   API(city).then(res => this.setState({ location: res.location }));
-    // }
+    const { city } = this.state;
+    if (city) {
+      API(city).then(res => this.setState({ current: res.current }));
+      API(city).then(res => this.setState({ location: res.location }));
+    }
 
     // API(city).then(res => localStorage.setItem('weather', JSON.stringify(res)));
 
-    const savedWeather = localStorage.getItem('weather');
-    const parseSavedWeather = JSON.parse(savedWeather);
+    // const savedWeather = localStorage.getItem('weather');
+    // const parseSavedWeather = JSON.parse(savedWeather);
 
-    this.setState({ location: parseSavedWeather.location });
-    this.setState({ current: parseSavedWeather.current });
+    // this.setState({ location: parseSavedWeather.location });
+    // this.setState({ current: parseSavedWeather.current });
   }
 
   handleChange = e => {
