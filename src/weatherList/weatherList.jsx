@@ -1,7 +1,8 @@
 import React from 'react';
+// eslint-disable-next-line import/no-unresolved
 import styles from './weatherlist.module.css';
 
-const weatherList = ({ current, location, onChange, onClick, value }) => {
+const weatherList = ({ current, location, onChange, onSubmit, value }) => {
   return (
     <ul className={styles.list}>
       <div className={styles.img}>
@@ -10,18 +11,19 @@ const weatherList = ({ current, location, onChange, onClick, value }) => {
         <img alt="weather" src={current.weather_icons}></img>
       </div>
       <div className={styles.form}>
-        <form action="">
+        <form action="" onSubmit={onSubmit}>
           <input
             className={styles.input_city}
             placeholder="Enter city"
             type="text"
             value={value}
             onChange={onChange}
+            // onClick={onClick}
           />
+          <button className={styles.btn} type="submit">
+            Show weather
+          </button>
         </form>
-        <button className={styles.btn} type="submit" onClick={onClick}>
-          Show weather
-        </button>
       </div>
 
       <li className={styles.list_item}>

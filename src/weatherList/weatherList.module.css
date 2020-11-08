@@ -8,6 +8,10 @@
   border-radius: 5%;
 }
 
+form {
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;

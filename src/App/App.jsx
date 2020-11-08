@@ -30,7 +30,7 @@ export default class App extends Component {
     this.setState({ city: e.target.value });
   };
 
-  handleClick = evt => {
+  handleSubmit = evt => {
     evt.preventDefault();
 
     this.componentDidMount();
@@ -47,7 +47,7 @@ export default class App extends Component {
           location={location}
           value={city}
           onChange={this.handleChange}
-          onClick={this.handleClick}
+          onSubmit={this.handleSubmit}
         />
       </div>
     );
